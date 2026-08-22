@@ -5,10 +5,6 @@ A production-inspired **Distributed Job Scheduler** built with Node.js, Express.
 The system demonstrates distributed job processing, atomic concurrency control, retry handling, fault tolerance, worker monitoring, scheduling, and a developer dashboard.
 
 ---
-## Dashboard Preview
-
-### Developer Dashboard
-![Developer Dashboard](docs/screenshots/dashboard.png)
 
 ## Dashboard & System Monitoring
 
