@@ -168,9 +168,78 @@ All required assignment deliverables are included in the repository.
 
 ---
 
+## Setup & Installation
+
+### Prerequisites
+
+- Node.js
+- PostgreSQL
+- npm
+- Git
+
+### 1. Clone the Repository
+
+git clone https://github.com/jaschahal211/distributed-job-scheduler.git
+cd distributed-job-scheduler
+
+### 2. Install Dependencies
+
+npm install
+
+cd client
+npm install
+cd ..
+
+### 3. Configure Environment Variables
+
+cp .env.example .env
+
+Configure the required PostgreSQL database credentials and application settings in `.env`.
+
+> Never commit the `.env` file. Use `.env.example` as the configuration template.
+
+### 4. Setup PostgreSQL Database
+
+Create the required PostgreSQL database and configure the database connection using the values specified in `.env`.
+
+The repository provides database migrations and seed files under the `database/` directory.
+
+Refer to `docs/database.md` for database schema and configuration details.
+
+### 5. Start the Backend Server
+
+Start the Express.js API server using the appropriate script defined in `package.json`.
+
+### 6. Start Worker Processes
+
+Start one or more worker processes using the appropriate worker script defined in `package.json`.
+
+Multiple worker instances can be started simultaneously to demonstrate:
+
+- Distributed job processing
+- Worker-level concurrency
+- Queue-level concurrency
+- Atomic job claiming
+- Retry handling
+- Worker heartbeats
+- Stale worker recovery
+- Fault-tolerant processing
+
+### 7. Start the React Dashboard
+
+cd client
+npm run dev
+
+### 8. Run Tests
+
+Run the automated test suite using the test command defined in `package.json`.
+
+Refer to `docs/testing.md` for detailed testing instructions.
+
+---
+
 ## Project Structure
 
-```text
 distributed-job-scheduler/
 
 ├── database/
@@ -236,3 +305,17 @@ distributed-job-scheduler/
 ├── package.json
 ├── package-lock.json
 └── README.md
+
+---
+
+## Documentation
+
+Additional technical documentation is available in the `docs/` directory:
+
+- `docs/architecture.md` — System architecture and component interactions
+- `docs/architecture.png` — Architecture diagram
+- `docs/database.md` — Database schema and design
+- `docs/er-diagram.png` — Entity Relationship diagram
+- `docs/api.md` — API endpoints and usage
+- `docs/design-decisions.md` — Design decisions and trade-offs
+- `docs/testing.md` — Automated testing strategy and instructions
