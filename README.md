@@ -179,20 +179,26 @@ All required assignment deliverables are included in the repository.
 
 ### 1. Clone the Repository
 
+```bash
 git clone https://github.com/jaschahal211/distributed-job-scheduler.git
 cd distributed-job-scheduler
+```
 
 ### 2. Install Dependencies
 
+```bash
 npm install
 
 cd client
 npm install
 cd ..
+```
 
 ### 3. Configure Environment Variables
 
+```bash
 cp .env.example .env
+```
 
 Configure the required PostgreSQL database credentials and application settings in `.env`.
 
@@ -227,8 +233,10 @@ Multiple worker instances can be started simultaneously to demonstrate:
 
 ### 7. Start the React Dashboard
 
+```bash
 cd client
 npm run dev
+```
 
 ### 8. Run Tests
 
@@ -240,47 +248,18 @@ Refer to `docs/testing.md` for detailed testing instructions.
 
 ## Project Structure
 
+```text
 distributed-job-scheduler/
-
+│
+├── client/
+│   └── ...
+│
 ├── database/
 │   ├── migrations/
 │   │   └── 001_init_schema.sql
 │   ├── seed/
 │   │   └── seed.js
 │   └── db.js
-│
-├── server/
-│   └── src/
-│       ├── controllers/
-│       ├── middleware/
-│       ├── routes/
-│       ├── services/
-│       ├── utils/
-│       └── server.js
-│
-├── worker/
-│   └── src/
-│       ├── worker.js
-│       ├── queuePoller.js
-│       ├── jobExecutor.js
-│       ├── retryManager.js
-│       ├── heartbeat.js
-│       ├── staleWorkerRecovery.js
-│       ├── gracefulShutdown.js
-│       └── cronScheduler.js
-│
-├── client/
-│   └── ...
-│
-├── tests/
-│   └── __tests__/
-│       ├── auth.test.js
-│       ├── backoff.test.js
-│       ├── concurrency.test.js
-│       ├── dlq.test.js
-│       ├── jobs.test.js
-│       ├── retry.test.js
-│       └── worker.test.js
 │
 ├── docs/
 │   ├── screenshots/
@@ -301,10 +280,55 @@ distributed-job-scheduler/
 │   ├── design-decisions.md
 │   └── testing.md
 │
+├── server/
+│   └── src/
+│       ├── controllers/
+│       ├── middleware/
+│       ├── routes/
+│       ├── services/
+│       ├── utils/
+│       └── server.js
+│
+├── tests/
+│   └── __tests__/
+│       ├── auth.test.js
+│       ├── backoff.test.js
+│       ├── concurrency.test.js
+│       ├── dlq.test.js
+│       ├── jobs.test.js
+│       ├── retry.test.js
+│       └── worker.test.js
+│
+├── worker/
+│   └── src/
+│       ├── worker.js
+│       ├── queuePoller.js
+│       ├── jobExecutor.js
+│       ├── retryManager.js
+│       ├── heartbeat.js
+│       ├── staleWorkerRecovery.js
+│       ├── gracefulShutdown.js
+│       └── cronScheduler.js
+│
 ├── .env.example
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
+
+---
+
+## Documentation
+
+Additional technical documentation is available in the `docs/` directory:
+
+- `docs/architecture.md` — System architecture and component interactions
+- `docs/architecture.png` — Architecture diagram
+- `docs/database.md` — Database schema and design
+- `docs/er-diagram.png` — Entity Relationship diagram
+- `docs/api.md` — API endpoints and usage
+- `docs/design-decisions.md` — Design decisions and trade-offs
+- `docs/testing.md` — Automated testing strategy and instructions
 
 ---
 
