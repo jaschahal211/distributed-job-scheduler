@@ -18,6 +18,60 @@ The system demonstrates distributed job processing, atomic concurrency control, 
 
 ---
 
+## Dashboard & System Monitoring
+
+The platform includes a developer dashboard for real-time visibility into job execution, worker health, queue activity, scheduling, retries, and failed-job recovery.
+
+### Executive Overview
+
+The executive overview provides a consolidated view of managed jobs, worker activity, execution throughput, success rates, queue state, and Dead Letter Queue activity.
+
+![Distributed Job Scheduler Dashboard](docs/screenshots/dashboard.png)
+
+### Job Execution Metrics
+
+The dashboard tracks execution throughput, completed and failed jobs, lifecycle-state distribution, queue activity, and worker node status.
+
+![Dashboard Execution Metrics](docs/screenshots/dashboard-metrics.png)
+
+### Job Explorer
+
+The Job Explorer provides searchable job visibility with execution status, priority, retry attempts, assigned worker, timestamps, and execution actions.
+
+![Job Explorer](docs/screenshots/job-explorer.png)
+
+### Worker Fleet Monitoring
+
+The Worker Fleet view monitors individual worker nodes, online/offline state, concurrency utilization, heartbeat freshness, and worker capacity.
+
+![Worker Fleet](docs/screenshots/worker-fleet.png)
+
+### Worker Heartbeat History
+
+Worker heartbeat history provides visibility into worker liveness and active-job state over time, supporting worker health monitoring and stale-worker detection.
+
+![Worker Heartbeat History](docs/screenshots/worker-heartbeat-history.png)
+
+### Dead Letter Queue
+
+The Dead Letter Queue provides visibility into jobs that exceeded their retry limits, including failure causes, attempt counts, timestamps, and redrive actions.
+
+![Dead Letter Queue](docs/screenshots/dead-letter-queue.png)
+
+### Dead Letter Queue Inspector
+
+The DLQ inspector provides detailed failure information for individual jobs, including error details, execution payload, and the ability to re-queue failed jobs.
+
+![Dead Letter Queue Inspector](docs/screenshots/dead-letter-queue-inspector.png)
+
+### Recurring Cron Schedules
+
+The scheduling interface manages recurring jobs using Unix cron expressions, target queues, job types, and next/previous execution times.
+
+![Recurring Cron Schedules](docs/screenshots/cron-schedules.png)
+
+---
+
 ## Key Features
 
 ### Job Management
@@ -172,6 +226,16 @@ distributed-job-scheduler/
 │       └── worker.test.js
 │
 ├── docs/
+│   ├── screenshots/
+│   │   ├── dashboard.png
+│   │   ├── dashboard-metrics.png
+│   │   ├── job-explorer.png
+│   │   ├── worker-fleet.png
+│   │   ├── worker-heartbeat-history.png
+│   │   ├── dead-letter-queue.png
+│   │   ├── dead-letter-queue-inspector.png
+│   │   └── cron-schedules.png
+│   │
 │   ├── architecture.md
 │   ├── architecture.png
 │   ├── database.md
