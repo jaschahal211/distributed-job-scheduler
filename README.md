@@ -10,14 +10,6 @@ The system demonstrates distributed job processing, atomic concurrency control, 
 ### Developer Dashboard
 ![Developer Dashboard](docs/screenshots/dashboard.png)
 
-### Worker Monitoring
-![Worker Monitoring](docs/screenshots/workers.png)
-
-### Job Execution
-![Job Execution](docs/screenshots/job-details.png)
-
----
-
 ## Dashboard & System Monitoring
 
 The platform includes a developer dashboard for real-time visibility into job execution, worker health, queue activity, scheduling, retries, and failed-job recovery.
