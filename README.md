@@ -331,15 +331,3 @@ Additional technical documentation is available in the `docs/` directory:
 - `docs/testing.md` — Automated testing strategy and instructions
 
 ---
-
-## Documentation
-
-Additional technical documentation is available in the `docs/` directory:
-
-- `docs/architecture.md` — System architecture and component interactions
-- `docs/architecture.png` — Architecture diagram
-- `docs/database.md` — Database schema and design
-- `docs/er-diagram.png` — Entity Relationship diagram
-- `docs/api.md` — API endpoints and usage
-- `docs/design-decisions.md` — Design decisions and trade-offs
-- `docs/testing.md` — Automated testing strategy and instructions
