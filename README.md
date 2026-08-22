@@ -15,6 +15,7 @@ The system demonstrates distributed job processing, atomic concurrency control, 
 
 ### Job Execution
 ![Job Execution](docs/screenshots/job-details.png)
+
 ---
 
 ## Key Features
